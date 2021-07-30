@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold Bets Prototype</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0 auto;
+        height: 100vh;
+        width: 80%;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
+        color: whitesmoke;
+      }
+
+      header {
+        text-align: center;
+        border-bottom: 1px solid white;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .getNumPlayers {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      #numberOfPlayers {
+        width: 50px;
+        margin-left: 5px;
+      }
+
+      #numOfPlayersBtn {
+        margin-left: 5px;
+        padding: 1px;
+      }
+
+      .errorMsg {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Golf Bets "skins"</h1>
+    </header>
+    <main>
+      <div class="directions">
+        <h3>Skins</h3>
+        <p>
+          The player with the least number of strokes wins. Every player must
+          "Hole" their ball for the winner to be declared.
+        </p>
+      </div>
+      <div class="getNumPlayers">
+        <label for="numberOfPlayers">Enter the number of players:</label>
+        <input
+          type="text"
+          name="numberOfPlayers"
+          id="numberOfPlayers"
+          value=""
+        />
+        <input
+          type="button"
+          name="numOfPlayersBtn"
+          id="numOfPlayersBtn"
+          value="Start"
+        /><br />
+      </div>
+      <div class="game">
+        <p class="errorMsg"></p>
+        <h4 id="playerOne" class="hidden">Player One:</h4>
+        <p id="playerOneScore" class="hidden">0</p>
+        <button id="player1Stroke" class="hidden">Add Stroke</button>
+        <button id="player1Holed" class="hidden">Holed</button>
+        <h4 id="playerTwo" class="hidden">Player Two:</h4>
+        <p id="playerTwoScore" class="hidden">0</p>
+        <button id="player2Stroke" class="hidden">Add Stroke</button>
+        <button id="player2Holed" class="hidden">Holed</button>
+        <h4 id="playerThree" class="hidden">Player Three:</h4>
+        <p id="playerThreeScore" class="hidden">0</p>
+        <button id="player3Stroke" class="hidden">Add Stroke</button>
+        <button id="player3Holed" class="hidden">Holed</button>
+        <h4 id="playerFour" class="hidden">Player Four:</h4>
+        <p id="playerFourScore" class="hidden">0</p>
+        <button id="player4Stroke" class="hidden">Add Stroke</button>
+        <button id="player4Holed" class="hidden">Holed</button>
+      </div>
+      <h3 id="victoryMessage"></h3>
+    </main>
+  </body>
+  <script src="golfBets.js"></script>
+</html>
